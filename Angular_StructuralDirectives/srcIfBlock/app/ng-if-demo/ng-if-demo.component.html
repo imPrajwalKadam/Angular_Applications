@@ -1,0 +1,28 @@
+<h1>Prajwal Kadam's Permenent Adress </h1>
+
+<!--Use of ngIf in case of hardcoded value-->
+<h1 *ngIf="flag">Pune</h1>
+
+<!-- We can use any property with ngIf-->
+<h1 *ngIf="flag">142 Somwar Peth</h1>
+
+<!-- We can also perform if else partition-->
+<h1 *ngIf="flag; else OtherPart">Trishunde Ganpati Mandir</h1>
+
+<ng-template #OtherPart>
+  <h1>
+    4th Floor Prachit Recidency
+  </h1>
+</ng-template>
+
+<!--We can also use below syntax for if else-->
+<h2>This is Another way to demonstrate if block syntax</h2>
+<div *ngIf="true; then ifblock; else elseblock"></div> 
+
+<ng-template #ifblock>
+  <h1>Prajwal's  If block</h1>
+</ng-template>
+
+<ng-template #elseblock>
+  <h1>Prajwal's Else block</h1>
+</ng-template>
